@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AI BRAIN DELEGATE</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-container">
+        <div class="logo">
+          <%= link_to "AI BRAIN DELEGATE", root_path %>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><%= link_to "Concept", concept_path %></li>
+            <li><%= link_to "Certification", certification_path %></li>
+            <li><%= link_to "Education", education_path %></li>
+            <li><%= link_to "Cases", cases_path %></li>
+            <li><%= link_to "Contact", contact_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <%= yield %>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <p>&copy; <%= Time.current.year %> AI BRAIN DELEGATE. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
