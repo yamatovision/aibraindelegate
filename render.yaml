@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: aibraindelegate
+    env: ruby
+    buildCommand: bundle install
+    startCommand: bundle exec rails server
+    envVars:
+      - key: RAILS_ENV
+        value: production
+      - key: RAILS_MASTER_KEY
+        sync: false
+    databases:
+      - name: postgres
