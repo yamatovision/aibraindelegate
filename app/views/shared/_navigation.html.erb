@@ -1,0 +1,16 @@
+<nav class="main-nav">
+  <ul>
+    <li><%= link_to "Concept", concept_path %></li>
+    <li><%= link_to "Certification", certification_path %></li>
+    <li><%= link_to "Education", education_path %></li>
+    <li><%= link_to "Cases", cases_path %></li>
+    <li><%= link_to "Courses", courses_path %></li>
+    <li><%= link_to "Contact", contact_path %></li>
+    <% if user_signed_in? %>
+      <li><%= link_to "My Page", user_path(current_user) %></li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to "Login", new_user_session_path %></li>
+    <% end %>
+  </ul>
+</nav>
